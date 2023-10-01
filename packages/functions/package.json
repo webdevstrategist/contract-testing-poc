@@ -1,0 +1,19 @@
+{
+    "name": "@contract-testing-poc/functions",
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "test": "sst bind vitest",
+        "typecheck": "tsc -noEmit"
+    },
+    "devDependencies": {
+        "@pact-foundation/pact": "^12.1.0",
+        "@types/aws-lambda": "^8.10.122",
+        "@types/node": "^20.8.0",
+        "sst": "^2.26.9",
+        "vitest": "^0.34.6"
+    },
+    "dependencies": {
+        "@faker-js/faker": "^8.1.0"
+    }
+}
