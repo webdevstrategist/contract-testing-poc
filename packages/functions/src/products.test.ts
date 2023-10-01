@@ -6,12 +6,19 @@ describe("Pact Verification", () => {
     it("validates the expectations of ProductService", () => {
         const opts = {
             logLevel: "info",
-            providerBaseUrl: "<AWS_URL>",
-            provider: "ProductService",
+            providerBaseUrl: "",
+            provider: "productsService",
             providerVersion: "1.0.0",
+            // consumerVersionSelectors:[{
+            //     "branch":"master"
+            // }],
+            // pactBrokerUrl: process.env.PACT_BROKER_URL || "http://localhost:8000",
+            // pactBrokerUsername: process.env.PACT_BROKER_USERNAME || "pact_workshop",
+            // pactBrokerPassword: process.env.PACT_BROKER_PASSWORD || "pact_workshop",
             pactUrls: [
                 path.resolve(__dirname, '../../ui/pacts/productsUI-productsService.json')
             ]
+            //publishVerificationResult: true
         };
 
         //@ts-ignore
